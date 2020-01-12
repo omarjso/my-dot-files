@@ -27,9 +27,9 @@ alias sv="TERM=xterm-256color ssh oomar@vergil.u.washington.edu"
 
 alias sn="ssh omarjamal@supernova.ocf.berkeley.edu"
 
-alias brc="vim ~/.bashrc"
+alias brc="vim ~/dot_files/.bashrc"
 
-alias vrc="vim ~/.vimrc"
+alias vrc="vim ~/dot_files/.vimrc"
 
 alias notes="cd ~/Notes"
 
@@ -106,17 +106,21 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+git_branch() {
+	git branch 2>/dev/null | grep '^*' | colrm 1 2
+}
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
+    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \e[1;33m($(git_branch))\033[0m \n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
+    export PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w \e[1;33m($(git_branch))\033[0m \n\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    export PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -124,7 +128,7 @@ esac
 
 #user@host color
 case $HOSTNAME in
-	(vergil11.u.washington.edu) PS1='\e[1;37m\u\e[1;33m@\e[1;35m\h:\e[31m\W\e[0m\n$ ';;
+	(vergil11.u.washington.edu) export PS1='\e[1;37m\u\e[1;33m@\e[1;35m\h:\e[31m\W\e[0m \e[1;33m($(git_branch))\033[0m \n$ ';;
 esac
 
 # enable color support of ls and also add handy aliases
