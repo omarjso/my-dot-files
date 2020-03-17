@@ -4,6 +4,8 @@
 :command WQ wq
 :command Wq wq
 
+:set autoindent
+
 "Relative line numbers with current line number
 :set number relativenumber
 
