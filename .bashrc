@@ -23,23 +23,11 @@ esac
 #MY ADDITIONS
 #----------------------
 
-alias sv="TERM=xterm-256color ssh oomar@vergil.u.washington.edu"     
 
-alias sn="ssh omarjamal@supernova.ocf.berkeley.edu"
-
-alias brc="vim ~/dot_files/.bashrc"
-
-alias vrc="vim ~/dot_files/.vimrc"
-
-alias notes="cd ~/Notes"
-
-alias cn="cd ~/Notes/UWcourses"
-
-alias ks="ls"
-
-alias CSE143="cd ~/Notes/UWourses/CSE/CSE143X/"
-
-alias PE="cd ~/RecMath/ProjectEuler/"
+# Importing my bash aliases
+if [ -f ~/.bash_aliases ]; then
+	    source ~/.bash_aliases
+fi
 
 mkcd () {
 	mkdir "$1" && cd "$1"

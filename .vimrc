@@ -32,6 +32,13 @@ set cc=80
 "Solution to tmux bad colors
 set background=dark
 
+"Open splits at the bottom and right
+set splitbelow splitright
+
+"---------------------------------------------------
+"Disabled Options
+"---------------------------------------------------
+
 "Gives the ability to put the cursor on non existting charecters
 "set virtualedit=all
 
@@ -43,3 +50,19 @@ set background=dark
     "execute "set <xRight>=\e[1;*C"
     "execute "set <xLeft>=\e[1;*D"
 "endif
+
+
+"---------------------------------------------------
+"Plugins Section: Using vim-plug
+"https://github.com/junegunn/vim-plug
+"---------------------------------------------------
+"Specify Directory for plugins
+call plug#begin('~/.vim/plugged')
+
+"List plugins here
+
+"[1] seamless navigation between tmux and vim splits
+Plug 'https://github.com/christoomey/vim-tmux-navigator'
+
+"Initialzes plugin system
+call plug#end()
