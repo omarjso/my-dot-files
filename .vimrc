@@ -35,6 +35,27 @@ set background=dark
 "Open splits at the bottom and right
 set splitbelow splitright
 
+"This is done to comply with quality guide lines in cs class
+au BufNewFile,BufRead *.html, *.css, *.js
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+
+"---------------------------------------------------
+"Plugins Section: Using vim-plug
+"https://github.com/junegunn/vim-plug
+"---------------------------------------------------
+"Specify Directory for plugins
+call plug#begin('~/.vim/plugged')
+
+"List plugins here
+
+"[1] seamless navigation between tmux and vim splits
+Plug 'https://github.com/christoomey/vim-tmux-navigator'
+
+"Initialzes plugin system
+call plug#end()
+
 "---------------------------------------------------
 "Disabled Options
 "---------------------------------------------------
@@ -51,18 +72,3 @@ set splitbelow splitright
     "execute "set <xLeft>=\e[1;*D"
 "endif
 
-
-"---------------------------------------------------
-"Plugins Section: Using vim-plug
-"https://github.com/junegunn/vim-plug
-"---------------------------------------------------
-"Specify Directory for plugins
-call plug#begin('~/.vim/plugged')
-
-"List plugins here
-
-"[1] seamless navigation between tmux and vim splits
-Plug 'https://github.com/christoomey/vim-tmux-navigator'
-
-"Initialzes plugin system
-call plug#end()
