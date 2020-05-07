@@ -37,9 +37,7 @@ set splitbelow splitright
 
 "This is done to comply with quality guide lines in cs class
 au BufNewFile,BufRead *.html, *.css, *.js
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
+	\ set tabstop=2 set softtabstop=2 set shiftwidth=2
 
 "---------------------------------------------------
 "Plugins Section: Using vim-plug
