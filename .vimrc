@@ -36,8 +36,8 @@ set background=dark
 set splitbelow splitright
 
 "This is done to comply with quality guide lines in cs class
-au BufNewFile,BufRead *.html, *.css, *.js
-	\ set tabstop=2 set softtabstop=2 set shiftwidth=2
+au BufNewFile,BufRead *.html,*.css,*.js
+    \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 "---------------------------------------------------
 "Plugins Section: Using vim-plug
