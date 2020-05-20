@@ -25,8 +25,8 @@ esac
 
 
 # Importing my bash aliases
-if [ -f ~/.bash_aliases ]; then
-	    source ~/.bash_aliases
+if [ -f ~/.aliases/.bash_aliases ]; then
+	    source ~/.aliases/.bash_aliases
 fi
 
 mkcd () {
