@@ -23,7 +23,6 @@ esac
 #MY ADDITIONS
 #----------------------
 
-
 # Importing my bash aliases
 if [ -f ~/.aliases/.bash_aliases ]; then
 	    source ~/.aliases/.bash_aliases
@@ -163,3 +162,8 @@ fi
 
 #fix backspace problem
 stty erase '^?'
+
+WSL_HOST=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
+export WSL_HOST=$WSL_HOST
+export DISPLAY=$WSL_HOST:0.0
+export LIBGL_ALWAYS_INDIRECT=1
