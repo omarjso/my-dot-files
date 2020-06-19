@@ -16,7 +16,7 @@ Plug 'morhetz/gruvbox'
 "[3] Auto completion by YCM
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 
-" Initialzes plugin system
+" Initializes plugin system
 call plug#end()
 
 
@@ -41,6 +41,11 @@ filetype plugin indent on
 
 " Jump to definition
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+
+" Switch between Arabic and English display and keybinding
+nnoremap <silent> <leader>a :set arabic<CR>
+nnoremap <silent> <leader>e :set noarabic<CR>
+
 
 " Mapping the exit and write command to common mistypings
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang>     <args>
