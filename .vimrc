@@ -25,15 +25,13 @@ call plug#end()
 "---------------------------------------------------
 colorscheme gruvbox
 
+let g:gruvbox_contrast_dark = 'hard'
+
 let mapleader = " "
 
 " Enable debugging
 let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'debug'
-
-" If the base settings don't repro, paste your existing config for YCM only,
-" here:
-" let g:ycm_....
 
 " Load YCM (only)
 let &rtp .= ',' . expand( '<sfile>:p:h' )
@@ -64,7 +62,7 @@ filetype plugin indent on
 set number relativenumber
 
 " Spell Checking mapped to <F5> and set highlighting color
-map <silent> <F5> :setlocal spell spelllang=en_us <bar> hi SpellBad guibg=#7f7e7e ctermbg=8 <CR>
+map <silent> <F5> :setlocal spell spelllang=en_us <CR>
 map <silent> <F6> :set nospell<CR>
 
 " Word Completion mapped to <F6> (not working, not useful anymore)
@@ -93,4 +91,13 @@ set incsearch
 
 " This is done to comply with quality guide lines in cs class
 au BufNewFile,BufRead *.html,*.css,*.js
-    \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    \ setlocal tabstop=2 expandtab shiftwidth=2
+
+" Changes coloring for spell checking
+hi SpellBad ctermbg=gray ctermfg=black
+hi SpellRare ctermbg=red
+hi SpellLocal ctermbg=gray ctermfg=black
+hi SpellCap ctermbg=blue ctermfg=black
+
+" Changes coloring for YCM and ctrl p menus
+hi Pmenu cterm=none ctermbg=DarkGray ctermfg=DarkYellow
