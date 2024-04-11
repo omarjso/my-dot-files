@@ -16,6 +16,9 @@ Plug 'morhetz/gruvbox'
 "[3] Auto completion by YCM
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 
+"[4] Linter and style checker with autocompletion features"
+Plug 'dense-analysis/ale'
+
 " Initializes plugin system
 call plug#end()
 
@@ -101,3 +104,24 @@ hi SpellCap ctermbg=blue ctermfg=black
 
 " Changes coloring for YCM and ctrl p menus
 hi Pmenu cterm=none ctermbg=DarkGray ctermfg=DarkYellow
+
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
+" Switching buffers only hides rather than close
+set hidden
+
+nnoremap <leader>b :ls<CR>:b<space>
+nnoremap <leader><Right> :bnext<CR>
+nnoremap <leader><Left> :bprevious<CR>
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+let g:ale_virtualtext_cursor = 'current'
+
+" Use Python from the active Conda environment
+let g:ale_python_flake8_executable = $CONDA_PREFIX . '/bin/python'
+let g:ale_enabled = 1
