@@ -3,7 +3,7 @@
 " https://github.com/junegunn/vim-plug
 "---------------------------------------------------
 " Specify Directory for plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 " List plugins here
 
@@ -13,11 +13,15 @@ Plug 'https://github.com/christoomey/vim-tmux-navigator'
 "[2] color scheme
 Plug 'morhetz/gruvbox'
 
-"[3] Auto completion by YCM
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
-
 "[4] Linter and style checker with autocompletion features"
 Plug 'dense-analysis/ale'
+
+"[5] markdown compilation
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+let g:plug_timeout = 120
 
 " Initializes plugin system
 call plug#end()
@@ -30,11 +34,14 @@ colorscheme gruvbox
 
 let g:gruvbox_contrast_dark = 'hard'
 
+set guicursor=n-v-c:block-Cursor/lCursor,ve:ver25-Cursor,o:hor50-Cursor
+
 let mapleader = " "
 
 " Enable debugging
 let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'debug'
+let g:ycm_server_python_interpreter = $CONDA_PREFIX . '/bin/python'
 
 " Load YCM (only)
 let &rtp .= ',' . expand( '<sfile>:p:h' )
@@ -89,8 +96,11 @@ set background=dark
 " Open splits at the bottom and right
 set splitbelow splitright
 
-" incremental search
+" Search
 set incsearch
+set hlsearch
+"This unsets the "last search pattern" register by hitting return
+nnoremap <nowait><silent> <CR> :noh<CR><CR>
 
 " This is done to comply with quality guide lines in cs class
 au BufNewFile,BufRead *.html,*.css,*.js
@@ -107,7 +117,7 @@ hi Pmenu cterm=none ctermbg=DarkGray ctermfg=DarkYellow
 
 " Persistent undo
 set undofile
-set undodir=$HOME/.vim/undo
+set undodir=$HOME/.local/share/nvim/undo
 set undolevels=1000
 set undoreload=10000
 
@@ -125,3 +135,10 @@ let g:ale_virtualtext_cursor = 'current'
 " Use Python from the active Conda environment
 let g:ale_python_flake8_executable = $CONDA_PREFIX . '/bin/python'
 let g:ale_enabled = 1
+
+" Customize ALE warning and error colors in Vim script
+" Use a muted color for warnings
+hi ALEWarning ctermfg=DarkGray ctermbg=none guifg=#928374 guibg=none
+hi ALEError ctermfg=Red ctermbg=none guifg=#FB4934 guibg=none
+
+let g:python3_host_prog = '/usr/local/anaconda3/envs/ml/bin/python'
