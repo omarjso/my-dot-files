@@ -19,6 +19,7 @@ Plug 'dense-analysis/ale'
 "[5] markdown compilation
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
+"[6] go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 let g:plug_timeout = 120
