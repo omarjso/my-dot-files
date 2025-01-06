@@ -38,10 +38,14 @@ Added smart switching between tmux panes and vim panes
 I am using the starter config from [lazyvim starter](https://github.com/LazyVim/starter)
 
 ### Options
-  - Remove cursor line highlight
+- Indentation
+    - default to 4
+- Cursor
+    - highlight only the number portion of the line the cursor and change its color
+    - make the cursor a block in all modes
 
 ### Keybinds
-  - Map mistypings of `wq` to exit and save
+- Map mistypings of `wq` to exit and save
   - disable `q:` [(issue)](https://github.com/Saghen/blink.cmp/issues/893)
 
 ### Plugins
