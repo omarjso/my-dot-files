@@ -56,3 +56,6 @@ I am using the starter config from [lazyvim starter](https://github.com/LazyVim/
 - `nvim-tmux-navigator` [(link)](https://github.com/christoomey/vim-tmux-navigator)
     - navigate between nvim and tmux panes
     - lazyvim by defualt maps `<C-{i,j,k,l}>` to navigate between windows by mapping to `<C-W>{i,j,k,l}`. This [must be overridden](https://www.lazyvim.org/configuration/plugins#%EF%B8%8F-adding--disabling-plugin-keymaps)
+
+### LSPs
+- `pyright` for `python`
