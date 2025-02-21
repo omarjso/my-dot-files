@@ -1,0 +1,11 @@
+{
+  "assumption": {
+    "body": [
+      "\\begin{assumption}",
+      " \\label{as:$1}",
+      " $2",
+      "\\end{assumption}"
+    ],
+    "prefix": "assumption"
+  }
+}
