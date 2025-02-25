@@ -37,6 +37,8 @@ The are three categories of plugins in LazyVim:
     - `coding.copilot`, `coding.copilot-chat`
   - `coding.luasnip`
     - Snippets are saved in `nvim/snippets/`
+  - `vimtex`
+    - See [this](#latex)
 - Third-party
   - `gruvbox` [(link)](https://github.com/ellisonleao/gruvbox.nvim)
     - theme
@@ -49,3 +51,13 @@ The are three categories of plugins in LazyVim:
 ### LSPs
 
 Using `mason.nvim` which is preconfigured with LazyVim.
+
+## Latex
+
+Before 2025-02-24, I ran a `vim`/`nvim` tmux pane, on the left. On the right I
+had a pane that runs my own script 'commod', which runs a command whenever a
+file is updated. In this case, it ran `xelatex $FILE_NAME`.
+
+As of 2025-02-25, I am using `vimtex` with `latexmk` as a compiler and
+`sioyek` as a viewer. This now provides me with new features like inverse-search and
+auto-compiling without an external script.
