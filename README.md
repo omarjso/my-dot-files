@@ -41,3 +41,7 @@ Added smart switching between tmux panes and vim panes
 ## Neovim
 
 See [this](./nvim/README.md)
+
+## Sioyek
+
+Currently I am using sioyek as the pdf viewer for my `vimtex`.
