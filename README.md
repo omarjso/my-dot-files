@@ -23,9 +23,15 @@ precedence over other python installations
 - tpm
   - pluggin manager
 - tmux-sensible
+  - sensible defaults
 - tmux-resurrect
+  - restrating tmux with the same layout after computer restart
 - tmux-continuum
+  - built on top of tmux-resurrect and makes it automatic
 - tmux-yank
+  - copy to system clipboard in tmux
+- tmux-ssh-split
+  - allow splitting panes to the same server with ssh
 
 ### Keybinds
 
