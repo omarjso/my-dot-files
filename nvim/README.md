@@ -21,8 +21,7 @@ LazyVim is a Neovim setup powered by 💤 lazy.nvim to make it easy to customize
 
 - Map mistypings of `wq` to exit and save
 - Disable `q:` [(issue)](https://github.com/Saghen/blink.cmp/issues/893)
-- Make `gx` create a local file if it does not exists
-  - TODO: make the popup window for `whichkey` show this in the description
+- Make `gm` open or create a markdown file if it is not created
 
 ### Plugins
 
