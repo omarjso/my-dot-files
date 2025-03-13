@@ -20,7 +20,9 @@ LazyVim is a Neovim setup powered by 💤 lazy.nvim to make it easy to customize
 ### Keybinds
 
 - Map mistypings of `wq` to exit and save
-  - disable `q:` [(issue)](https://github.com/Saghen/blink.cmp/issues/893)
+- Disable `q:` [(issue)](https://github.com/Saghen/blink.cmp/issues/893)
+- Make `gx` create a local file if it does not exists
+  - TODO: make the popup window for `whichkey` show this in the description
 
 ### Plugins
 
