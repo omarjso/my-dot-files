@@ -5,7 +5,10 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## Quick Intro
 
-LazyVim is a Neovim setup powered by 💤 lazy.nvim to make it easy to customize and extend your config. See this [book](https://lazyvim-ambitious-devs.phillips.codes/) for an extensive guide on how to use LazyVim.
+LazyVim is a Neovim setup powered by 💤 lazy.nvim to make it easy to customize
+and extend your config. See this
+[book](https://lazyvim-ambitious-devs.phillips.codes/) for an extensive guide
+on how to use LazyVim.
 
 ## My Configuration
 
@@ -22,13 +25,24 @@ LazyVim is a Neovim setup powered by 💤 lazy.nvim to make it easy to customize
 - Map mistypings of `wq` to exit and save
 - Disable `q:` [(issue)](https://github.com/Saghen/blink.cmp/issues/893)
 - Make `gm` open or create a markdown file if it is not created
+  - Tried to append this functionality to `gx` but faced problems
+    1. markdown files weren't opened as a vim buffer
+    2. didn't recover exact behavior of old `gx`, for example, when opening
+       links
+  - see [`gx.nvim`](https://github.com/chrishrb/gx.nvim/tree/main) for
+    inspiration, and this
+    [conversation](https://chatgpt.com/share/67d5b8a5-b41c-800d-ba77-980e83f9d695)
+    for my attempts
 
 ### Plugins
 
 The are three categories of plugins in LazyVim:
-1- Plugins that are preconfigured in LazyVim
-2- LazyExtras which are not enabled by default but integrate well
-3- Third-party plugins which LazyVim has no awareness of.
+
+1. Plugins that are preconfigured in LazyVim
+2. LazyExtras which are not enabled by default but integrate well
+3. Third-party plugins which LazyVim has no awareness of.
+
+For each of these, these are some highlights:
 
 - Disabled from LazyVim
   - `folke/noice.nvim` [(link)](https://github.com/folke/noice.nvim)
