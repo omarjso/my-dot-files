@@ -2,10 +2,26 @@
   "assumption": {
     "body": [
       "\\begin{assumption}",
-      " \\label{as:$1}",
-      " $2",
+      "     \\label{as:$1}",
+      "     $2",
       "\\end{assumption}"
     ],
     "prefix": "assumption"
+  },
+  "align*": {
+    "body": [
+      "\\begin{align*}",
+      "    $2",
+      "\\end{align*}"
+    ],
+    "prefix": "align*"
+  },
+  "align": {
+    "body": [
+      "\\begin{align}",
+      "    $2",
+      "\\end{align}"
+    ],
+    "prefix": "align"
   }
 }
