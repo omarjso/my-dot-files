@@ -52,6 +52,7 @@ For each of these, these are some highlights:
     - `coding.copilot`, `coding.copilot-chat`
   - `coding.luasnip`
     - Snippets are saved in `nvim/snippets/`
+    - [see this](#adding-custom-snippets)
   - `vimtex`
     - See [this](#latex)
 - Third-party
@@ -131,3 +132,42 @@ Where the options mean:
 - `user@remote_host:/remote/directory`: The remote user, host, and directory to
   mount.
 - `remote-project`: The local directory where the remote file system will be mounted.
+
+### Adding Custom Snippets
+
+To add a custom snippet add a directory for the language under `nvim/snippets`
+if one doesn't exist. Inside it create `init.json` with contents like this:
+
+```json
+{
+  "assumption": {
+    "body": [
+      "\\begin{assumption}",
+      "     \\label{as:$1}",
+      "     $2",
+      "\\end{assumption}"
+    ],
+    "prefix": "assumption"
+  },
+  ...
+}
+```
+
+Finally, if you ended up making a new file, go to `nvim/snippets/pacjage.json` and append the new file, similar to this:
+
+```json{
+  "name": "personal-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "tex",
+        "path": "./latex/init.json"
+      }
+    ]
+  }
+}
+```
+
+After adding a snippet, you can refresh snippets in you current session with:
+
+<!--TODO-->
