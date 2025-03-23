@@ -133,7 +133,7 @@ Where the options mean:
   mount.
 - `remote-project`: The local directory where the remote file system will be mounted.
 
-### Adding Custom Snippets
+## Adding Custom Snippets
 
 To add a custom snippet add a directory for the language under `nvim/snippets`
 if one doesn't exist. Inside it create `init.json` with contents like this:
@@ -171,3 +171,17 @@ Finally, if you ended up making a new file, go to `nvim/snippets/pacjage.json` a
 After adding a snippet, you can refresh snippets in you current session with:
 
 <!--TODO-->
+
+## Setting up a Copilot Toggle
+
+I first activated `coding.copilot` on late February 2025. However, I ran out
+of free tokens by mid March 2025. This meant that I had to toggle the plugin
+on and off to stop the annoying notification to remind me that I ran out of
+tokens. I did this by removing them from my `LazyExtras`, and now to reflect
+these changes I had to restart my `nvim` instances. For toggling them back I
+again had to enable them for `LazyExtras` and restart my `nvim`.
+
+This was a hassle, and fortunately there was a
+[solution](https://github.com/LazyVim/LazyVim/discussions/4232). For more
+details into how this works, look at the commented
+[code](./lua/plugins/snacks.lua).
