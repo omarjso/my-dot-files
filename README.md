@@ -61,4 +61,11 @@ See [this](./nvim/README.md)
 
 ## Sioyek
 
-Currently I am using sioyek as the pdf viewer for my `vimtex`.
+Currently I am using
+[sioyek](https://sioyek-documentation.readthedocs.io/en/latest/index.html) as
+the pdf viewer for my `vimtex`.
+
+### Configs Changes
+
+- Added `<C-r>` to reload the screen
+- Added `<C-x>` to toggle synctex
