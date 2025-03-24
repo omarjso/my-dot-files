@@ -4,5 +4,5 @@ ln -sf ~/dot_files/.zshrc ~/.zshrc
 ln -sf ~/dot_files/.tmux.conf ~/.tmux.conf
 ln -sf ~/dot_files/.gitconfig ~/.gitconfig
 for file in ~/dot_files/sioyek.app/*.config; do
-    ln -sf "$file" /Applications/sioyek.app/Contents/MacOS/
+    ln -sf "$file" ~/Library/Application\ Support/sioyek/
 done
