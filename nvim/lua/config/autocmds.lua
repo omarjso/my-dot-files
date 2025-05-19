@@ -16,3 +16,13 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.expandtab = true
   end,
 })
+
+-- Set line wrapping for LaTeX documents, so that each sentence is on a line
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "latex", "tex" },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+    vim.opt_local.breakindent = true
+  end,
+})

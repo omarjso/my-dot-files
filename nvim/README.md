@@ -36,6 +36,11 @@ on how to use LazyVim.
 - Make `<C-]>` reset the `CopilotChat` chat window instead of `<C-l>` due to a
 conflict with `vim-tmux-navigator`
 
+### Autocommands
+
+- tab size = 2 for `javascript` and the like
+- soft wrap for `latex`
+
 ### Plugins
 
 The are three categories of plugins in LazyVim:
