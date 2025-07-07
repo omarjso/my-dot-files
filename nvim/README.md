@@ -187,3 +187,18 @@ This was a hassle, and fortunately there was a
 [solution](https://github.com/LazyVim/LazyVim/discussions/4232). For more
 details into how this works, look at the commented
 [code](./lua/plugins/snacks.lua).
+
+## General Issues
+
+### Blob resolution in CopilotChat
+
+Resolving blobs like `#files` and `#filenames`, was returning the following error:
+
+```
+attempt to index local 'g' (a nil value)
+```
+
+Based on this [CopilotChat
+issue](https://github.com/CopilotC-Nvim/CopilotChat.nvim/issues/1066), a
+suggested solution was installing
+[ripgrep](https://github.com/BurntSushi/ripgrep)
