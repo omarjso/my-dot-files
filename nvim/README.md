@@ -33,6 +33,8 @@ on how to use LazyVim.
     inspiration, and this
     [conversation](https://chatgpt.com/share/67d5b8a5-b41c-800d-ba77-980e83f9d695)
     for my attempts
+- Make `<C-]>` reset the `CopilotChat` chat window instead of `<C-l>` due to a
+conflict with `vim-tmux-navigator`
 
 ### Plugins
 
