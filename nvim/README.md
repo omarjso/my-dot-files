@@ -155,7 +155,7 @@ if one doesn't exist. Inside it create `init.json` with contents like this:
 }
 ```
 
-Finally, if you ended up making a new file, go to `nvim/snippets/pacjage.json` and append the new file, similar to this:
+Finally, if you ended up making a new file, go to `nvim/snippets/package.json` and append the new file, similar to this:
 
 ```json{
   "name": "personal-snippets",
