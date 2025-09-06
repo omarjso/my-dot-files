@@ -32,3 +32,4 @@ RUN chmod +x /root/dot_files/createSymlinks.sh && \
 RUN nvim --headless "+Lazy! install" +qa
 
 WORKDIR /root/work
+CMD ["zsh"]

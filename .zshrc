@@ -20,4 +20,4 @@ case "$(uname -s)" in
 esac
 
 # Aliases
-[ -f "$HOME/.common_aliases" ] && source "$HOME/.common_aliases"
+[ -f "$HOME/dot_files/.common_aliases" ] && source "$HOME/dot_files/.common_aliases"

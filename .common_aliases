@@ -6,7 +6,6 @@ alias sl="ls"
 
 # Show overwrite warning
 alias mv="mv -i"
-alias rm="rm -i"
 
 alias gs="git status"
 alias gd="git diff"
