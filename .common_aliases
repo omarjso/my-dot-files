@@ -10,3 +10,8 @@ alias rm="rm -i"
 
 alias gs="git status"
 alias gd="git diff"
+
+mkcd () { mkdir "$1" && cd "$1"; }
+
+# guard against accidental deletion
+rm () { mv "$@" /tmp; }
