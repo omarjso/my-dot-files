@@ -19,14 +19,11 @@ RUN curl -fL --retry 5 --retry-delay 5 -o nvim.tar.gz \
  && mv nvim-linux-x86_64 /opt/nvim \
  && ln -s /opt/nvim/bin/nvim /usr/local/bin/nvim
 
-RUN useradd -ms /bin/zsh omarjso
-RUN chsh -s /bin/zsh omarjso
-USER omarjso
-WORKDIR /home/omarjso
+WORKDIR /root
 
-COPY --chown=omarjso:omarjso . /home/omarjso/dot_files
-RUN chmod +x dot_files/createSymlinks.sh && \
-    ./dot_files/createSymlinks.sh
+COPY . /root/dot_files
+RUN chmod +x /root/dot_files/createSymlinks.sh && \
+    /root/dot_files/createSymlinks.sh
 
 # Pre-install lazy.nvim plugins
 # TODO: Currently this step isn't cached becuase the above copy is updated
@@ -34,4 +31,4 @@ RUN chmod +x dot_files/createSymlinks.sh && \
 # the lazy version via :Lazy Lock or some like that
 RUN nvim --headless "+Lazy! install" +qa
 
-WORKDIR /home/omarjso/work
+WORKDIR /root/work
