@@ -19,6 +19,8 @@ RUN curl -fL --retry 5 --retry-delay 5 -o nvim.tar.gz \
  && mv nvim-linux-x86_64 /opt/nvim \
  && ln -s /opt/nvim/bin/nvim /usr/local/bin/nvim
 
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
 WORKDIR /root
 
 COPY . /root/dot_files
