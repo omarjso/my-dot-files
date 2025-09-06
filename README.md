@@ -9,11 +9,6 @@
 I have a file of aliases in `~/.aliases/.bash_aliases` which is composed of
 both dynamically generated aliases
 
-### Conda
-
-I appended conda at the end of `PATH` so that conda environments have
-precedence over other python installations
-
 ---
 
 ## Tmux
