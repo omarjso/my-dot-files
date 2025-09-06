@@ -1,0 +1,12 @@
+alias vim="nvim"
+
+# Common ls mistakes
+alias ks="ls"
+alias sl="ls"
+
+# Show overwrite warning
+alias mv="mv -i"
+alias rm="rm -i"
+
+alias gs="git status"
+alias gd="git diff"

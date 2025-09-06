@@ -103,9 +103,9 @@ source $ZSH/oh-my-zsh.sh
 
 #export PATH="~/bin:$PATH"
 
-# Importing my bash aliases
-if [ -f ~/.aliases/.bash_aliases ]; then
-	    source ~/.aliases/.bash_aliases
+# Import common aliases
+if [ -f ./.common_aliases ]; then
+	    source ./.common_aliases
 fi
 
 mkcd () {
